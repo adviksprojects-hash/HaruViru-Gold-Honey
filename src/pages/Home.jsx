@@ -87,42 +87,42 @@ export const Home = () => {
           <span>100% Unpasteurized & NMR Lab Tested Harvest!</span>
         </div>
 
-        {/* Main Hero Content Overlay (Reduced top padding to hug the jar mouth cleanly) */}
-        <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 pb-16 flex flex-col items-center justify-between min-h-[85vh] w-full max-w-full">
+        {/* Main Hero Content Overlay (Reduced top space on mobile & adjusted for background animation height) */}
+        <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 pb-12 sm:pb-16 flex flex-col items-center justify-between min-h-[95vh] sm:min-h-[90vh] w-full max-w-full">
           
-          <div className="space-y-3.5 max-w-4xl mx-auto w-full">
-            {/* Top Pill Badge (First text right below navbar & jar) */}
-            <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-amber-100/90 border border-amber-300 px-3.5 sm:px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-black text-amber-950 shadow-xs hover:scale-105 transition-transform cursor-default max-w-[95vw]">
+          <div className="space-y-2.5 sm:space-y-4 max-w-4xl mx-auto w-full">
+            {/* Top Pill Badge (First text right below navbar with reduced mobile gap) */}
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-amber-100/90 border border-amber-300 px-3.5 sm:px-4 py-1.5 rounded-full text-xs sm:text-xs font-black text-amber-950 shadow-xs hover:scale-105 transition-transform cursor-default max-w-[95vw]">
               <span>✨</span>
               <span className="truncate">India's Most Pure & Certified Raw Honey Destination</span>
             </div>
 
-            {/* High-Contrast Crisp Headline (Solid Deep Espresso + Radiant Golden Gradient) */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-[#1C130C] tracking-[-0.035em] leading-[1.08] select-none break-words max-w-full">
-              <span className="block text-[#1C130C] drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
+            {/* Main heading: Starts below the honey jar on mobile with bold, increased mobile font size */}
+            <h1 className="mt-28 xs:mt-36 sm:mt-0 text-4xl xs:text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-[#542A0A] tracking-[-0.035em] leading-[1.08] select-none break-words max-w-full">
+              <span className="block text-[#542A0A]">
                 Savor Special
               </span>
-              <span className="block text-[#1C130C] drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
+              <span className="block text-[#542A0A]">
                 Moments in
               </span>
-              <span className="gradient-text-honey font-black block sm:inline drop-shadow-[0_1px_2px_rgba(255,255,255,0.5)]">
+              <span className="gradient-text-honey font-black block sm:inline">
                 Every Golden Spoon
               </span>
             </h1>
 
-            {/* Subtitle */}
-            <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-[#3D2817] font-semibold leading-relaxed pt-1 px-2">
+            {/* Subtitle / product description: Rich brown #713B13 with enhanced mobile font size */}
+            <p className="max-w-xl sm:max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-[#713B13] font-semibold leading-relaxed pt-1 px-2">
               Cold-Extracted Raw Sidr, 4K Botanical Traceability, Zero Added Sugars, Nuclear Magnetic Resonance (NMR) Verified. 100% Raw Wildflower Reserves.
             </p>
 
             {/* Dual Action Buttons (Primary button receives the flowing honey spill) */}
-            <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 pt-5 w-full max-w-xs sm:max-w-none mx-auto">
+            <div className="relative flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 pt-3 sm:pt-5 w-full max-w-xs sm:max-w-none mx-auto">
               
               {/* Primary Button with Honey Spill Overlay */}
               <div className="relative inline-flex items-center group w-full sm:w-auto">
                 <Link
                   to="/shop"
-                  className="w-full sm:w-auto gradient-btn-honey text-white font-black text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-xl shadow-amber-500/30 flex items-center justify-center gap-2.5 hover:scale-105 active:scale-95 transition-all relative z-10"
+                  className="w-full sm:w-auto gradient-btn-honey text-white font-black text-sm sm:text-base px-7 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-xl shadow-amber-500/30 flex items-center justify-center gap-2 sm:gap-2.5 hover:scale-105 active:scale-95 transition-all relative z-10"
                 >
                   <Flame className="w-4 h-4 fill-white text-white" />
                   <span>Explore Reserves & Shop</span>
@@ -160,7 +160,7 @@ export const Home = () => {
           </div>
 
           {/* Bottom space where the honey stream cascades down into the expansive Honey Lake */}
-          <div className="h-28 sm:h-36 w-full pointer-events-none" />
+          <div className="h-24 sm:h-36 w-full pointer-events-none" />
 
         </div>
       </section>

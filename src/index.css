@@ -36,11 +36,13 @@
   }
 }
 
-/* Authentic liquid royal honey gold headline gradient */
+/* Highlighted heading — “Every Golden Spoon” (Honey gold #FFC928 with dark brown #542A0A subtle shadow & #8A4B00) */
 .gradient-text-honey {
-  background: linear-gradient(90deg, #9A3412 0%, #C2410C 20%, #D97706 55%, #F59E0B 85%, #FBBF24 100%);
+  background: linear-gradient(90deg, #8A4B00 0%, #FFC928 45%, #8A4B00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #FFC928;
+  filter: drop-shadow(0 1px 2px rgba(84, 42, 10, 0.5));
 }
 
 /* Rich warm amber-gold CTA button with radiant warm glow */
