@@ -82,7 +82,7 @@ export const Home = () => {
         <AnimatedBees />
 
         {/* Floating Top Right Tag */}
-        <div className="hidden md:inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-md border border-slate-200/90 px-4 py-1.5 rounded-full text-[11px] font-bold text-slate-700 shadow-sm absolute top-4 right-8 hover:scale-105 transition-transform z-20">
+        <div className="hidden md:inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-md border border-amber-200/90 px-4 py-1.5 rounded-full text-[11px] font-bold text-amber-950 shadow-sm absolute top-4 right-8 hover:scale-105 transition-transform z-20">
           <span>🎉</span>
           <span>100% Unpasteurized & NMR Lab Tested Harvest!</span>
         </div>
@@ -92,26 +92,26 @@ export const Home = () => {
           
           <div className="space-y-3.5 max-w-4xl mx-auto w-full">
             {/* Top Pill Badge (First text right below navbar & jar) */}
-            <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#FFF1F2] border border-[#FECDD3] px-3 sm:px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-black text-[#BE123C] shadow-xs hover:scale-105 transition-transform cursor-default max-w-[95vw]">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-amber-100/90 border border-amber-300 px-3.5 sm:px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-black text-amber-950 shadow-xs hover:scale-105 transition-transform cursor-default max-w-[95vw]">
               <span>✨</span>
               <span className="truncate">India's Most Pure & Certified Raw Honey Destination</span>
             </div>
 
-            {/* High-Contrast Crisp Headline (Solid Deep Slate + Vibrant Gradient) */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-slate-900 tracking-[-0.035em] leading-[1.08] select-none break-words max-w-full">
-              <span className="block text-slate-900">
+            {/* High-Contrast Crisp Headline (Solid Deep Espresso + Radiant Golden Gradient) */}
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-[#1C130C] tracking-[-0.035em] leading-[1.08] select-none break-words max-w-full">
+              <span className="block text-[#1C130C] drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
                 Savor Special
               </span>
-              <span className="block text-slate-900">
+              <span className="block text-[#1C130C] drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
                 Moments in
               </span>
-              <span className="gradient-text-honey font-black block sm:inline">
+              <span className="gradient-text-honey font-black block sm:inline drop-shadow-[0_1px_2px_rgba(255,255,255,0.5)]">
                 Every Golden Spoon
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-slate-700 font-semibold leading-relaxed pt-1 px-2">
+            <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-[#3D2817] font-semibold leading-relaxed pt-1 px-2">
               Cold-Extracted Raw Sidr, 4K Botanical Traceability, Zero Added Sugars, Nuclear Magnetic Resonance (NMR) Verified. 100% Raw Wildflower Reserves.
             </p>
 
@@ -122,7 +122,7 @@ export const Home = () => {
               <div className="relative inline-flex items-center group w-full sm:w-auto">
                 <Link
                   to="/shop"
-                  className="w-full sm:w-auto gradient-btn-honey text-white font-black text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-xl shadow-rose-500/30 flex items-center justify-center gap-2.5 hover:scale-105 active:scale-95 transition-all relative z-10"
+                  className="w-full sm:w-auto gradient-btn-honey text-white font-black text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-xl shadow-amber-500/30 flex items-center justify-center gap-2.5 hover:scale-105 active:scale-95 transition-all relative z-10"
                 >
                   <Flame className="w-4 h-4 fill-white text-white" />
                   <span>Explore Reserves & Shop</span>
@@ -152,7 +152,7 @@ export const Home = () => {
               {/* Secondary Button */}
               <Link
                 to="/about"
-                className="w-full sm:w-auto bg-white/95 hover:bg-white text-slate-900 border border-slate-300 font-bold text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-md transition-all flex items-center justify-center gap-2 hover:border-slate-400 hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto bg-white/95 hover:bg-white text-stone-900 border border-amber-200/80 font-bold text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-md transition-all flex items-center justify-center gap-2 hover:border-amber-300 hover:scale-105 active:scale-95"
               >
                 <span>Our Lab Purity Story 🔬</span>
               </Link>

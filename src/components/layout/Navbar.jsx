@@ -35,25 +35,19 @@ export const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-md border-b border-slate-100 transition-all shadow-xs">
-      {/* Top micro-announcement banner */}
-      <div className="w-full overflow-hidden bg-gradient-to-r from-rose-500 via-orange-500 to-amber-500 text-white text-center text-[10px] sm:text-xs py-1.5 px-3 sm:px-4 font-bold tracking-wide flex items-center justify-center gap-1.5 sm:gap-2">
-        <Sparkles className="w-3.5 h-3.5 text-amber-200 animate-pulse shrink-0" />
-        <span className="truncate max-w-[85vw] sm:max-w-none">Autumn 2026 Raw Alpine Harvest • 100% Certified Raw & Untouched • Free Express Delivery Over $50</span>
-      </div>
-
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
           {/* Logo & Brand Identity (Clean modern sans-serif matching reference) */}
           <Link to="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-gradient-to-tr from-rose-500 to-amber-500 flex items-center justify-center text-white shadow-md shadow-rose-500/20 group-hover:scale-105 transition-transform text-base sm:text-lg">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform text-base sm:text-lg">
               🍯
             </div>
             <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 group-hover:text-rose-600 transition-colors leading-none">
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors leading-none">
                 HaruViru
               </span>
-              <span className="text-[9px] sm:text-[10px] font-black tracking-[0.25em] text-rose-600 uppercase mt-0.5 sm:mt-1">
+              <span className="text-[9px] sm:text-[10px] font-black tracking-[0.25em] text-amber-600 uppercase mt-0.5 sm:mt-1">
                 GOLD HONEY
               </span>
             </div>
@@ -90,7 +84,7 @@ export const Navbar = () => {
             {/* Search */}
             <Link
               to="/shop"
-              className="p-2 text-slate-600 hover:text-rose-600 hover:bg-rose-50 rounded-full transition-colors hidden sm:flex"
+              className="p-2 text-slate-600 hover:text-amber-600 hover:bg-amber-50 rounded-full transition-colors hidden sm:flex"
               title="Search Honey Reserves"
             >
               <Search className="w-4 h-4" />
@@ -99,7 +93,7 @@ export const Navbar = () => {
             {/* Shop / Order Button (Reference: 'Book' gradient pill) - shown on md+ */}
             <Link
               to="/shop"
-              className="gradient-btn-honey text-white text-xs font-black px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-md shadow-rose-500/25 active:scale-95 transition-all hidden md:flex items-center gap-1.5"
+              className="gradient-btn-honey text-white text-xs font-black px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-md shadow-amber-500/25 active:scale-95 transition-all hidden md:flex items-center gap-1.5"
             >
               <Flame className="w-3.5 h-3.5 fill-white text-white" />
               <span>Shop Now</span>
@@ -120,7 +114,7 @@ export const Navbar = () => {
             {/* User Profile Avatar */}
             <Link
               to="/user/profile"
-              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-100 hover:bg-rose-50 border border-slate-200 hidden sm:flex items-center justify-center text-slate-700 hover:text-rose-600 transition-colors"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-100 hover:bg-amber-50 border border-slate-200 hidden sm:flex items-center justify-center text-slate-700 hover:text-amber-600 transition-colors"
               title="My Account"
             >
               <User className="w-4 h-4" />
@@ -129,7 +123,7 @@ export const Navbar = () => {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-1.5 sm:p-2 text-slate-700 hover:text-rose-600 rounded-xl focus:outline-hidden"
+              className="lg:hidden p-1.5 sm:p-2 text-slate-700 hover:text-amber-600 rounded-xl focus:outline-hidden"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -160,7 +154,7 @@ export const Navbar = () => {
               onClick={() => setMobileMenuOpen(false)}
               className={`block px-4 py-3 rounded-xl text-sm font-bold transition-colors ${
                 isActive(link.path)
-                  ? 'bg-rose-50 text-rose-700 font-extrabold'
+                  ? 'bg-amber-50 text-amber-800 font-extrabold'
                   : 'text-slate-700 hover:bg-slate-50'
               }`}
             >

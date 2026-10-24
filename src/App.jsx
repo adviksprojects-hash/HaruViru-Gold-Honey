@@ -52,7 +52,6 @@ import { PurchaseSettings } from './pages/manager/PurchaseSettings';
 const CustomerLayout = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#FCF9F2] w-full max-w-full overflow-x-hidden">
-      <PersonaSwitcher />
       <Navbar />
       <main className="flex-1 w-full max-w-full overflow-x-hidden">
         <Outlet />

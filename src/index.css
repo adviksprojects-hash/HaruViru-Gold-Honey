@@ -36,23 +36,23 @@
   }
 }
 
-/* Vibrant headline gradient matching the reference image ("Your Private Paradise") */
+/* Authentic liquid royal honey gold headline gradient */
 .gradient-text-honey {
-  background: linear-gradient(90deg, #E11D48 0%, #EA580C 50%, #F59E0B 100%);
+  background: linear-gradient(90deg, #9A3412 0%, #C2410C 20%, #D97706 55%, #F59E0B 85%, #FBBF24 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Punchy primary CTA button with red-orange-gold gradient & warm glow */
+/* Rich warm amber-gold CTA button with radiant warm glow */
 .gradient-btn-honey {
-  background: linear-gradient(90deg, #E11D48 0%, #F97316 100%);
+  background: linear-gradient(90deg, #D97706 0%, #EA580C 50%, #F59E0B 100%);
   color: #FFFFFF;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gradient-btn-honey:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px -6px rgba(225, 29, 72, 0.4);
+  box-shadow: 0 12px 28px -6px rgba(217, 119, 6, 0.45);
 }
 
 /* Clean cards matching modern reference UI with requested 50px (50%) radius */
@@ -70,11 +70,11 @@
   border-color: #FED7AA;
 }
 
-/* Soft highlight pill badge matching reference ("✨ India's Most Loved...") */
+/* Soft highlight pill badge with warm honey tones */
 .badge-pill-soft {
-  background: #FFF1F2;
-  color: #BE123C;
-  border: 1px solid #FECDD3;
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FDE68A;
 }
 
 /* ============================================================== */
