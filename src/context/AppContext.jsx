@@ -98,9 +98,9 @@ export const AppProvider = ({ children }) => {
     }
   }
 
-  const cartShipping = cartSubtotal >= 50 || cartSubtotal === 0 ? 0 : 8.5;
+  const cartShipping = cartSubtotal >= 999 || cartSubtotal === 0 ? 0 : 99;
   const taxableAmount = Math.max(0, cartSubtotal - cartDiscount);
-  const cartTax = Number((taxableAmount * 0.08).toFixed(2));
+  const cartTax = Number((taxableAmount * 0.05).toFixed(2));
   const cartTotal = Number((taxableAmount + cartTax + cartShipping).toFixed(2));
 
   const addToCart = (product, quantity = 1, weight = product.weight) => {
@@ -152,11 +152,11 @@ export const AppProvider = ({ children }) => {
       return false;
     }
     if (cartSubtotal < found.minOrderValue) {
-      showToast(`Coupon requires a minimum order of $${found.minOrderValue}.`, 'error');
+      showToast(`Coupon requires a minimum order of ₹${found.minOrderValue}.`, 'error');
       return false;
     }
     setAppliedCoupon(found);
-    showToast(`Coupon "${found.code}" applied! Saved $${found.discountValue}${found.discountType === 'percentage' ? '%' : ''}.`, 'success');
+    showToast(`Coupon "${found.code}" applied! Saved ${found.discountType === 'percentage' ? `${found.discountValue}%` : `₹${found.discountValue}`}.`, 'success');
     return true;
   };
 

@@ -4,7 +4,7 @@ import { useApp } from '../../context/AppContext';
 import { 
   Building2, 
   TrendingUp, 
-  DollarSign, 
+  IndianRupee, 
   Truck, 
   Users, 
   FileText, 
@@ -56,12 +56,12 @@ export const OfflineSalesDashboard = () => {
           <div className="flex items-center justify-between text-stone-500">
             <span className="text-xs font-bold uppercase">Wholesale Revenue</span>
             <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
-              <DollarSign className="w-4 h-4" />
+              <IndianRupee className="w-4 h-4" />
             </div>
           </div>
           <div>
             <span className="font-serif-luxury text-2xl sm:text-3xl font-extrabold text-[#3D2206]">
-              ${wholesaleRevenue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{wholesaleRevenue.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
             <p className="text-[11px] text-emerald-700 font-semibold mt-1">+31.5% quarter-over-quarter</p>
           </div>
@@ -192,7 +192,7 @@ export const OfflineSalesDashboard = () => {
             <div className="p-4 bg-emerald-50/60 rounded-2xl border border-emerald-200 text-xs text-emerald-900 space-y-1">
               <span className="font-bold block">Pallet Freight Surcharge</span>
               <p className="text-[11px] text-emerald-800">
-                Minimum wholesale order for LTL pallet freight: 100 Jars ($2,400).
+                Minimum wholesale order for LTL pallet freight: 100 Jars (₹75,000).
               </p>
             </div>
           </div>

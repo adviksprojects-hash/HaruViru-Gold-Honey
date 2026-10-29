@@ -169,7 +169,7 @@ export const OrderHistory = () => {
                       <span className="font-medium text-stone-800">{item.productName}</span>
                       <span className="text-stone-400">({item.weight})</span>
                     </div>
-                    <span className="font-bold text-stone-900">${(item.price * item.quantity).toFixed(2)}</span>
+                    <span className="font-bold text-stone-900">₹{(item.price * item.quantity).toFixed(2)}</span>
                   </div>
                 ))}
               </div>
@@ -177,11 +177,11 @@ export const OrderHistory = () => {
               {/* Total footer */}
               <div className="pt-4 border-t border-stone-100 flex items-center justify-between">
                 <span className="text-xs text-stone-500">
-                  Tax: ${order.tax.toFixed(2)} • Shipping: {order.shippingFee === 0 ? 'Free' : `$${order.shippingFee.toFixed(2)}`}
+                  Tax: ₹{order.tax.toFixed(2)} • Shipping: {order.shippingFee === 0 ? 'Free' : `₹${order.shippingFee.toFixed(2)}`}
                 </span>
                 <div className="flex items-baseline gap-2">
                   <span className="text-xs font-semibold text-stone-500">Order Total:</span>
-                  <span className="text-xl font-black text-[#3D2206]">${order.totalAmount.toFixed(2)}</span>
+                  <span className="text-xl font-black text-[#3D2206]">₹{order.totalAmount.toFixed(2)}</span>
                 </div>
               </div>
             </div>
@@ -254,8 +254,8 @@ export const OrderHistory = () => {
                       {item.productName} ({item.weight})
                     </td>
                     <td className="py-2.5 text-center">{item.quantity}</td>
-                    <td className="py-2.5 text-right">${item.price.toFixed(2)}</td>
-                    <td className="py-2.5 text-right font-bold">${(item.price * item.quantity).toFixed(2)}</td>
+                    <td className="py-2.5 text-right">₹{item.price.toFixed(2)}</td>
+                    <td className="py-2.5 text-right font-bold">₹{(item.price * item.quantity).toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -263,12 +263,12 @@ export const OrderHistory = () => {
 
             {/* Totals */}
             <div className="space-y-1.5 text-xs text-stone-600 border-t border-stone-200 pt-3 text-right">
-              <div>Subtotal: <b>${selectedInvoice.subtotal.toFixed(2)}</b></div>
-              {selectedInvoice.discount > 0 && <div>Discount: <b>-${selectedInvoice.discount.toFixed(2)}</b></div>}
-              <div>Shipping Fee: <b>${selectedInvoice.shippingFee.toFixed(2)}</b></div>
-              <div>Tax: <b>${selectedInvoice.tax.toFixed(2)}</b></div>
+              <div>Subtotal: <b>₹{selectedInvoice.subtotal.toFixed(2)}</b></div>
+              {selectedInvoice.discount > 0 && <div>Discount: <b>-₹{selectedInvoice.discount.toFixed(2)}</b></div>}
+              <div>Shipping Fee: <b>₹{selectedInvoice.shippingFee.toFixed(2)}</b></div>
+              <div>GST (5%): <b>₹{selectedInvoice.tax.toFixed(2)}</b></div>
               <div className="text-base font-extrabold text-[#3D2206] pt-1">
-                Grand Total: ${selectedInvoice.totalAmount.toFixed(2)}
+                Grand Total: ₹{selectedInvoice.totalAmount.toFixed(2)}
               </div>
             </div>
 

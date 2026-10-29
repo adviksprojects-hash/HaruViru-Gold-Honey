@@ -23,16 +23,16 @@ export const Checkout = () => {
 
   // Form State
   const [formData, setFormData] = useState({
-    firstName: 'Sophia',
-    lastName: 'Montgomery',
-    email: 'sophia.mont@gmail.com',
-    phone: '+1 (555) 349-2810',
-    street: '742 Evergreen Terrace, Suite 4B',
-    city: 'San Francisco',
-    state: 'CA',
-    zip: '94107',
-    country: 'United States',
-    paymentMethod: 'Credit Card',
+    firstName: 'Aarav',
+    lastName: 'Sharma',
+    email: 'aarav.sharma@example.in',
+    phone: '+91 98765 43210',
+    street: 'Flat 402, Golden Palms, Bandra West',
+    city: 'Mumbai',
+    state: 'Maharashtra',
+    zip: '400050',
+    country: 'India',
+    paymentMethod: 'UPI / NetBanking',
     cardNumber: '•••• •••• •••• 4242',
     cardExp: '12/28',
     cardCvv: '884',
@@ -42,7 +42,7 @@ export const Checkout = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [confirmedOrder, setConfirmedOrder] = useState(null);
 
-  const expressFee = formData.shippingSpeed === 'express' ? 14 : 0;
+  const expressFee = formData.shippingSpeed === 'express' ? 149 : 0;
   const finalTotal = cartTotal + expressFee;
 
   const handleInputChange = (e) => {
@@ -133,14 +133,14 @@ export const Checkout = () => {
                 <span className="font-medium text-stone-800">
                   {item.quantity}x {item.productName} ({item.weight})
                 </span>
-                <span className="font-bold text-stone-900">${(item.price * item.quantity).toFixed(2)}</span>
+                <span className="font-bold text-stone-900">₹{(item.price * item.quantity).toFixed(2)}</span>
               </div>
             ))}
           </div>
 
           <div className="pt-2 flex justify-between items-baseline text-stone-900 font-bold border-t border-stone-100">
             <span>Total Paid</span>
-            <span className="text-2xl text-[#3D2206]">${confirmedOrder.totalAmount.toFixed(2)}</span>
+            <span className="text-2xl text-[#3D2206]">₹{confirmedOrder.totalAmount.toFixed(2)}</span>
           </div>
 
           <div className="bg-[#FAF4E4] p-3 rounded-xl border border-[#F5E5B5] text-xs text-stone-700 flex items-center gap-2">
@@ -368,7 +368,7 @@ export const Checkout = () => {
                     <span className="font-bold text-xs text-stone-900 block">
                       Priority Golden Flight (1-2 days)
                     </span>
-                    <span className="text-[11px] text-amber-700 font-semibold">+$14.00</span>
+                    <span className="text-[11px] text-amber-700 font-semibold">+₹149.00</span>
                   </div>
                 </label>
               </div>
@@ -466,7 +466,7 @@ export const Checkout = () => {
                     </div>
                   </div>
                   <span className="font-bold text-stone-900 shrink-0">
-                    ${(item.product.price * item.quantity).toFixed(2)}
+                    ₹{(item.product.price * item.quantity).toFixed(2)}
                   </span>
                 </div>
               ))}
@@ -476,27 +476,27 @@ export const Checkout = () => {
             <div className="space-y-2.5 text-xs text-stone-600 border-t border-stone-100 pt-4">
               <div className="flex justify-between">
                 <span>Subtotal</span>
-                <span className="font-bold text-stone-800">${cartSubtotal.toFixed(2)}</span>
+                <span className="font-bold text-stone-800">₹{cartSubtotal.toFixed(2)}</span>
               </div>
               {appliedCoupon && (
                 <div className="flex justify-between text-emerald-700 font-semibold">
                   <span>Coupon ({appliedCoupon.code})</span>
-                  <span>-${cartDiscount.toFixed(2)}</span>
+                  <span>-₹{cartDiscount.toFixed(2)}</span>
                 </div>
               )}
               <div className="flex justify-between">
                 <span>Shipping</span>
                 <span className="font-bold text-stone-800">
-                  {cartShipping + expressFee === 0 ? 'FREE' : `$${(cartShipping + expressFee).toFixed(2)}`}
+                  {cartShipping + expressFee === 0 ? 'FREE' : `₹${(cartShipping + expressFee).toFixed(2)}`}
                 </span>
               </div>
               <div className="flex justify-between">
-                <span>Tax (8%)</span>
-                <span className="font-bold text-stone-800">${cartTax.toFixed(2)}</span>
+                <span>GST (5%)</span>
+                <span className="font-bold text-stone-800">₹{cartTax.toFixed(2)}</span>
               </div>
               <div className="pt-3 border-t border-stone-100 flex justify-between items-baseline text-stone-900 font-bold">
                 <span className="text-sm">Total Due</span>
-                <span className="text-2xl text-[#3D2206]">${finalTotal.toFixed(2)}</span>
+                <span className="text-2xl text-[#3D2206]">₹{finalTotal.toFixed(2)}</span>
               </div>
             </div>
 

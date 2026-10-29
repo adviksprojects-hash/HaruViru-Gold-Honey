@@ -4,8 +4,8 @@ export const INITIAL_PRODUCTS = [
     name: 'Imperial Sidr Gold Mountain Honey',
     tagline: 'The King of Nectars harvested from ancient wild Sidr blossoms in high-altitude mountain valleys.',
     category: 'Sidr',
-    price: 48,
-    originalPrice: 58,
+    price: 1499,
+    originalPrice: 1899,
     weight: '500g',
     stock: 64,
     lowStockThreshold: 15,
@@ -32,7 +32,7 @@ export const INITIAL_PRODUCTS = [
       'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=80',
     ],
-    cogs: 19.5,
+    cogs: 650,
     sku: 'HV-SIDR-500'
   },
   {
@@ -40,8 +40,8 @@ export const INITIAL_PRODUCTS = [
     name: 'Royal Himalayan Wildflower Raw Honey',
     tagline: 'A multi-floral golden tapestry gathered from over 40 species of untouched alpine botanical blooms.',
     category: 'Wildflower',
-    price: 34,
-    originalPrice: 40,
+    price: 999,
+    originalPrice: 1199,
     weight: '500g',
     stock: 92,
     lowStockThreshold: 20,
@@ -67,7 +67,7 @@ export const INITIAL_PRODUCTS = [
       'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80'
     ],
-    cogs: 12.0,
+    cogs: 420,
     sku: 'HV-WLDF-500'
   },
   {
@@ -75,8 +75,8 @@ export const INITIAL_PRODUCTS = [
     name: 'Wild Forest Acacia Honey with Natural Comb',
     tagline: 'Crystal-clear golden nectar submerged with a fresh cut chunk of pure virgin bee-spun honeycomb.',
     category: 'Acacia',
-    price: 42,
-    originalPrice: 50,
+    price: 1299,
+    originalPrice: 1599,
     weight: '500g',
     stock: 38,
     lowStockThreshold: 12,
@@ -102,7 +102,7 @@ export const INITIAL_PRODUCTS = [
       'https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80'
     ],
-    cogs: 16.5,
+    cogs: 550,
     sku: 'HV-ACAC-500'
   },
   {
@@ -110,8 +110,8 @@ export const INITIAL_PRODUCTS = [
     name: 'Kashmir Valley White Velvet Honey',
     tagline: 'Extremely rare creamy pearl-white raw honey harvested from high-altitude wild clover and alfalfa.',
     category: 'Himalayan White',
-    price: 52,
-    originalPrice: 65,
+    price: 1699,
+    originalPrice: 1999,
     weight: '500g',
     stock: 24,
     lowStockThreshold: 10,
@@ -137,7 +137,7 @@ export const INITIAL_PRODUCTS = [
       'https://images.unsplash.com/photo-1621996346565-e3d5d6281691?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80'
     ],
-    cogs: 22.0,
+    cogs: 750,
     sku: 'HV-WHT-500'
   },
   {
@@ -145,8 +145,8 @@ export const INITIAL_PRODUCTS = [
     name: 'Raw Hexagonal Honeycomb Master Reserve',
     tagline: 'Whole pristine honey comb slab preserved straight in bespoke wooden presentation casing.',
     category: 'Raw Comb',
-    price: 68,
-    originalPrice: 85,
+    price: 2199,
+    originalPrice: 2599,
     weight: '400g',
     stock: 19,
     lowStockThreshold: 8,
@@ -171,7 +171,7 @@ export const INITIAL_PRODUCTS = [
     gallery: [
       'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80'
     ],
-    cogs: 28.0,
+    cogs: 950,
     sku: 'HV-COMB-400'
   },
   {
@@ -179,8 +179,8 @@ export const INITIAL_PRODUCTS = [
     name: 'Artisanal Turmeric & Ginger Infused Gold Honey',
     tagline: 'Ayurvedic therapeutic elixir infused with organic Lakadong turmeric and sun-cured ginger roots.',
     category: 'Infused',
-    price: 36,
-    originalPrice: 44,
+    price: 1149,
+    originalPrice: 1399,
     weight: '500g',
     stock: 55,
     lowStockThreshold: 15,
@@ -205,7 +205,7 @@ export const INITIAL_PRODUCTS = [
     gallery: [
       'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=800&q=80'
     ],
-    cogs: 13.5,
+    cogs: 480,
     sku: 'HV-TURM-500'
   },
   {
@@ -213,8 +213,8 @@ export const INITIAL_PRODUCTS = [
     name: 'High-Altitude Saffron Blossom Infused Gold',
     tagline: 'Imperial honey infused with handpicked Grade-1 Mongra Kashmiri saffron strands.',
     category: 'Infused',
-    price: 64,
-    originalPrice: 78,
+    price: 1999,
+    originalPrice: 2399,
     weight: '500g',
     stock: 14,
     lowStockThreshold: 8,
@@ -239,7 +239,7 @@ export const INITIAL_PRODUCTS = [
     gallery: [
       'https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=80'
     ],
-    cogs: 31.0,
+    cogs: 890,
     sku: 'HV-SAFF-500'
   },
   {
@@ -247,8 +247,8 @@ export const INITIAL_PRODUCTS = [
     name: 'Golden Dew Forest Organic Honey',
     tagline: 'Dark honeydew nectar harvested from ancient oak and pine forest canopies.',
     category: 'Wildflower',
-    price: 32,
-    originalPrice: 38,
+    price: 899,
+    originalPrice: 1099,
     weight: '1kg',
     stock: 75,
     lowStockThreshold: 18,
@@ -273,7 +273,7 @@ export const INITIAL_PRODUCTS = [
     gallery: [
       'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80'
     ],
-    cogs: 14.0,
+    cogs: 390,
     sku: 'HV-FRST-1000'
   }
 ];
@@ -364,7 +364,7 @@ export const INITIAL_ORDERS = [
     date: '2026-10-23',
     customerName: 'Sophia Montgomery',
     customerEmail: 'sophia.mont@gmail.com',
-    customerPhone: '+1 (555) 349-2810',
+    customerPhone: '+91 98765 43210',
     channel: 'online',
     type: 'B2C',
     items: [
@@ -372,31 +372,31 @@ export const INITIAL_ORDERS = [
         productId: 'prod-1',
         productName: 'Imperial Sidr Gold Mountain Honey',
         quantity: 2,
-        price: 48,
+        price: 1499,
         weight: '500g'
       },
       {
         productId: 'prod-4',
         productName: 'Kashmir Valley White Velvet Honey',
         quantity: 1,
-        price: 52,
+        price: 1699,
         weight: '500g'
       }
     ],
-    subtotal: 148,
-    tax: 11.84,
+    subtotal: 4697,
+    tax: 234.85,
     shippingFee: 0,
-    discount: 15,
-    totalAmount: 144.84,
+    discount: 500,
+    totalAmount: 4431.85,
     status: 'Processing',
     paymentStatus: 'Paid',
     paymentMethod: 'Credit Card',
     shippingAddress: {
-      street: '742 Evergreen Terrace, Suite 4B',
-      city: 'San Francisco',
-      state: 'CA',
-      zip: '94107',
-      country: 'United States'
+      street: 'Flat 402, Golden Palms, Bandra West',
+      city: 'Mumbai',
+      state: 'Maharashtra',
+      zip: '400050',
+      country: 'India'
     },
     trackingNumber: 'BLUEDART-88392174',
     courierPartner: 'BlueDart Express',
@@ -408,7 +408,7 @@ export const INITIAL_ORDERS = [
     date: '2026-10-22',
     customerName: 'Alexander Hayes',
     customerEmail: 'alex.hayes@apexresidences.com',
-    customerPhone: '+1 (555) 720-9114',
+    customerPhone: '+91 98112 34567',
     channel: 'online',
     type: 'B2C',
     items: [
@@ -416,27 +416,27 @@ export const INITIAL_ORDERS = [
         productId: 'prod-5',
         productName: 'Raw Hexagonal Honeycomb Master Reserve',
         quantity: 1,
-        price: 68,
+        price: 2199,
         weight: '400g'
       }
     ],
-    subtotal: 68,
-    tax: 5.44,
-    shippingFee: 8,
+    subtotal: 2199,
+    tax: 109.95,
+    shippingFee: 0,
     discount: 0,
-    totalAmount: 81.44,
+    totalAmount: 2308.95,
     status: 'Shipped',
     paymentStatus: 'Paid',
     paymentMethod: 'UPI / NetBanking',
     shippingAddress: {
-      street: '120 Park Avenue, 14th Floor',
-      city: 'New York',
-      state: 'NY',
-      zip: '10017',
-      country: 'United States'
+      street: 'Tower 4, Golf Links Residence',
+      city: 'New Delhi',
+      state: 'Delhi',
+      zip: '110003',
+      country: 'India'
     },
     trackingNumber: 'FDX-99201948',
-    courierPartner: 'FedEx Express Air',
+    courierPartner: 'Delhivery Air Express',
     invoiceUrl: '#invoice-9480'
   },
   {
@@ -445,7 +445,7 @@ export const INITIAL_ORDERS = [
     date: '2026-10-21',
     customerName: 'Gourmet Earth Organics Ltd.',
     customerEmail: 'procurement@gourmetearth.co',
-    customerPhone: '+1 (555) 881-0023',
+    customerPhone: '+91 99887 76655',
     channel: 'wholesale',
     type: 'B2B',
     items: [
@@ -453,41 +453,41 @@ export const INITIAL_ORDERS = [
         productId: 'prod-1',
         productName: 'Imperial Sidr Gold Mountain Honey',
         quantity: 120,
-        price: 36,
+        price: 1150,
         weight: '500g'
       },
       {
         productId: 'prod-2',
         productName: 'Royal Himalayan Wildflower Raw Honey',
         quantity: 240,
-        price: 24,
+        price: 750,
         weight: '500g'
       }
     ],
-    subtotal: 10080,
-    tax: 806.4,
-    shippingFee: 250,
-    discount: 500,
-    totalAmount: 10636.4,
+    subtotal: 318000,
+    tax: 15900,
+    shippingFee: 4500,
+    discount: 15000,
+    totalAmount: 323400,
     status: 'Processing',
     paymentStatus: 'Paid',
-    paymentMethod: 'Bank Wire (Net 30)',
+    paymentMethod: 'Bank Wire (RTGS / NEFT)',
     shippingAddress: {
-      street: 'Distribution Hub 4, Logistics Park West',
-      city: 'Chicago',
-      state: 'IL',
-      zip: '60607',
-      country: 'United States'
+      street: 'Warehouse 12, Logistics Park Sector 62',
+      city: 'Bengaluru',
+      state: 'Karnataka',
+      zip: '560068',
+      country: 'India'
     },
     b2bDetails: {
       companyName: 'Gourmet Earth Organics Ltd.',
-      taxId: 'US-EIN-9482103',
-      freightCarrier: 'FreightMaster Pallet Logistics (LTL-404)',
+      taxId: 'GSTIN29AABCG1234F1Z5',
+      freightCarrier: 'SafeExpress Pallet Cold-Chain (LTL-404)',
       poNumber: 'PO-GEO-2026-992',
       paymentTerms: 'Net 30 Days'
     },
     trackingNumber: 'FRT-LTL-849201',
-    courierPartner: 'FreightMaster LTL',
+    courierPartner: 'SafeExpress Cold-Chain',
     invoiceUrl: '#invoice-b2b-8042'
   },
   {
@@ -496,7 +496,7 @@ export const INITIAL_ORDERS = [
     date: '2026-10-20',
     customerName: 'Catherine Dubois',
     customerEmail: 'catherine.d@parisien.fr',
-    customerPhone: '+33 6 49 20 18 29',
+    customerPhone: '+91 91234 56789',
     channel: 'online',
     type: 'B2C',
     items: [
@@ -504,27 +504,27 @@ export const INITIAL_ORDERS = [
         productId: 'prod-7',
         productName: 'High-Altitude Saffron Blossom Infused Gold',
         quantity: 2,
-        price: 64,
+        price: 1999,
         weight: '500g'
       }
     ],
-    subtotal: 128,
-    tax: 10.24,
+    subtotal: 3998,
+    tax: 199.90,
     shippingFee: 0,
-    discount: 10,
-    totalAmount: 128.24,
+    discount: 300,
+    totalAmount: 3897.90,
     status: 'Delivered',
     paymentStatus: 'Paid',
     paymentMethod: 'Credit Card',
     shippingAddress: {
-      street: '18 Rue de la Paix',
-      city: 'Paris',
-      state: 'Île-de-France',
-      zip: '75002',
-      country: 'France'
+      street: 'Penthouse 18, Banjara Hills Rd 10',
+      city: 'Hyderabad',
+      state: 'Telangana',
+      zip: '500034',
+      country: 'India'
     },
     trackingNumber: 'DHL-EX-739201',
-    courierPartner: 'DHL Express Global',
+    courierPartner: 'BlueDart Express',
     invoiceUrl: '#invoice-9478'
   },
   {
@@ -541,25 +541,25 @@ export const INITIAL_ORDERS = [
         productId: 'prod-6',
         productName: 'Artisanal Turmeric & Ginger Infused Gold Honey',
         quantity: 80,
-        price: 28,
+        price: 890,
         weight: '500g'
       },
       {
         productId: 'prod-8',
         productName: 'Golden Dew Forest Organic Honey',
         quantity: 50,
-        price: 24,
+        price: 690,
         weight: '1kg'
       }
     ],
-    subtotal: 3440,
-    tax: 275.2,
-    shippingFee: 120,
-    discount: 200,
-    totalAmount: 3635.2,
+    subtotal: 105700,
+    tax: 5285,
+    shippingFee: 2500,
+    discount: 5000,
+    totalAmount: 108485,
     status: 'Shipped',
     paymentStatus: 'Paid',
-    paymentMethod: 'Bank Wire (Net 30)',
+    paymentMethod: 'Bank Wire (RTGS / NEFT)',
     shippingAddress: {
       street: 'Foothills Estate, Valley Rd',
       city: 'Rishikesh',
@@ -673,8 +673,8 @@ export const INITIAL_COUPONS = [
     code: 'GOLDEN15',
     discountType: 'percentage',
     discountValue: 15,
-    minOrderValue: 50,
-    maxDiscount: 30,
+    minOrderValue: 1499,
+    maxDiscount: 500,
     applicableChannel: 'online',
     expiryDate: '2026-12-31',
     usageCount: 148,
@@ -685,8 +685,8 @@ export const INITIAL_COUPONS = [
     id: 'cp-2',
     code: 'ROYALHIVE',
     discountType: 'fixed',
-    discountValue: 20,
-    minOrderValue: 100,
+    discountValue: 300,
+    minOrderValue: 2499,
     applicableChannel: 'all',
     expiryDate: '2026-11-30',
     usageCount: 89,
@@ -697,8 +697,8 @@ export const INITIAL_COUPONS = [
     id: 'cp-3',
     code: 'FREESHIP',
     discountType: 'fixed',
-    discountValue: 10,
-    minOrderValue: 45,
+    discountValue: 99,
+    minOrderValue: 499,
     applicableChannel: 'online',
     expiryDate: '2026-12-15',
     usageCount: 312,
@@ -709,8 +709,8 @@ export const INITIAL_COUPONS = [
     id: 'cp-4',
     code: 'WHOLESALE500',
     discountType: 'fixed',
-    discountValue: 500,
-    minOrderValue: 5000,
+    discountValue: 5000,
+    minOrderValue: 50000,
     applicableChannel: 'wholesale',
     expiryDate: '2026-12-31',
     usageCount: 12,
@@ -811,7 +811,7 @@ export const INITIAL_RAW_MATERIALS = [
     currentStock: 1450,
     unit: 'kg',
     minThreshold: 500,
-    unitCost: 14.5,
+    unitCost: 450,
     harvestDate: '2026-09-15',
     purityScore: '99.9% NMR',
     moistureLevel: '16.4%',
@@ -827,7 +827,7 @@ export const INITIAL_RAW_MATERIALS = [
     currentStock: 3200,
     unit: 'kg',
     minThreshold: 800,
-    unitCost: 8.2,
+    unitCost: 280,
     harvestDate: '2026-08-30',
     purityScore: '99.7% NMR',
     moistureLevel: '17.1%',
@@ -843,7 +843,7 @@ export const INITIAL_RAW_MATERIALS = [
     currentStock: 850,
     unit: 'units',
     minThreshold: 1200,
-    unitCost: 1.85,
+    unitCost: 28,
     status: 'Low Stock',
     location: 'Packaging Warehouse Rack C2'
   },
@@ -856,7 +856,7 @@ export const INITIAL_RAW_MATERIALS = [
     currentStock: 3400,
     unit: 'units',
     minThreshold: 1000,
-    unitCost: 0.42,
+    unitCost: 6,
     status: 'Optimal',
     location: 'Packaging Warehouse Rack D1'
   },
@@ -869,7 +869,7 @@ export const INITIAL_RAW_MATERIALS = [
     currentStock: 280,
     unit: 'units',
     minThreshold: 350,
-    unitCost: 3.2,
+    unitCost: 45,
     status: 'Low Stock',
     location: 'Packaging Warehouse Rack E4'
   }
@@ -881,16 +881,16 @@ export const INITIAL_B2B_DISTRIBUTORS = [
     companyName: 'Gourmet Earth Organics Ltd.',
     contactPerson: 'Sarah Jenkins',
     email: 'procurement@gourmetearth.co',
-    phone: '+1 (555) 881-0023',
+    phone: '+91 99887 76655',
     category: 'Supermarket Chain',
-    creditLimit: 25000,
-    outstandingBalance: 10636.4,
+    creditLimit: 500000,
+    outstandingBalance: 323400,
     paymentTerms: 'Net 30',
     totalOrders: 14,
-    lifetimeValue: 84200,
+    lifetimeValue: 1850000,
     status: 'Active',
     assignedRep: 'Vikramaditya Roy',
-    city: 'Chicago, IL'
+    city: 'Bengaluru, KA'
   },
   {
     id: 'dist-2',
@@ -899,46 +899,46 @@ export const INITIAL_B2B_DISTRIBUTORS = [
     email: 'supplies@sattvawellness.org',
     phone: '+91 98201 44829',
     category: 'Ayurvedic Pharmacy',
-    creditLimit: 15000,
-    outstandingBalance: 3635.2,
+    creditLimit: 300000,
+    outstandingBalance: 108485,
     paymentTerms: 'Net 15',
     totalOrders: 9,
-    lifetimeValue: 38400,
+    lifetimeValue: 850000,
     status: 'Active',
     assignedRep: 'Vikramaditya Roy',
     city: 'Rishikesh, UK'
   },
   {
     id: 'dist-3',
-    companyName: 'Artisan Pantry Boutique NYC',
+    companyName: 'Artisan Pantry Boutique Mumbai',
     contactPerson: 'Matteo Bellini',
-    email: 'matteo@artisanpantry.nyc',
-    phone: '+1 (212) 555-0199',
+    email: 'matteo@artisanpantry.in',
+    phone: '+91 22 5550 0199',
     category: 'Organic Boutique',
-    creditLimit: 10000,
+    creditLimit: 200000,
     outstandingBalance: 0,
     paymentTerms: 'Net 30',
     totalOrders: 6,
-    lifetimeValue: 24900,
+    lifetimeValue: 620000,
     status: 'Active',
     assignedRep: 'Vikramaditya Roy',
-    city: 'New York, NY'
+    city: 'Mumbai, MH'
   },
   {
     id: 'dist-4',
     companyName: 'Four Seasons Alpine Spa & Resort',
     contactPerson: 'Helena Berg',
     email: 'procurement.spa@fs-alpine.com',
-    phone: '+41 22 555 4310',
+    phone: '+91 11 5554 4310',
     category: 'Gourmet Cafe Group',
-    creditLimit: 30000,
-    outstandingBalance: 4200,
+    creditLimit: 600000,
+    outstandingBalance: 85000,
     paymentTerms: 'Net 60',
     totalOrders: 11,
-    lifetimeValue: 62000,
+    lifetimeValue: 1450000,
     status: 'Active',
     assignedRep: 'Vikramaditya Roy',
-    city: 'Geneva, Switzerland'
+    city: 'New Delhi, DL'
   }
 ];
 
@@ -965,7 +965,7 @@ export const INITIAL_FAQS = [
     id: 'faq-4',
     category: 'Orders & Shipping',
     question: 'What is the shipping timeframe and threshold for free shipping?',
-    answer: 'We provide complimentary standard shipping on all retail orders over $50. Standard delivery arrives within 3-5 business days across the US and select international destinations. Express Priority 1-2 day delivery is available at checkout.'
+    answer: 'We provide complimentary standard shipping on all retail orders over ₹999 across India. Standard delivery arrives within 3-5 business days. Express Priority 1-2 day delivery is available at checkout.'
   },
   {
     id: 'faq-5',

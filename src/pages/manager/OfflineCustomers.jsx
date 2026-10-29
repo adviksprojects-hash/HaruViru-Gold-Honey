@@ -8,7 +8,7 @@ import {
   Mail, 
   MapPin, 
   ShieldCheck, 
-  DollarSign, 
+  IndianRupee, 
   X
 } from 'lucide-react';
 
@@ -133,7 +133,7 @@ export const OfflineCustomers = () => {
 
               <div>
                 <span className="text-stone-400 text-[10px] uppercase font-bold block">Credit & Terms</span>
-                <span className="font-bold text-stone-800">${d.creditLimit.toLocaleString()} Limit</span>
+                <span className="font-bold text-stone-800">₹{d.creditLimit.toLocaleString('en-IN')} Limit</span>
                 <p className="text-amber-800 font-semibold text-[11px] mt-0.5">Terms: {d.paymentTerms}</p>
                 <p className="text-stone-500 text-[11px]">Rep: {d.assignedRep}</p>
               </div>
@@ -142,11 +142,11 @@ export const OfflineCustomers = () => {
             <div className="p-3 bg-[#FAF6EE] rounded-2xl border border-stone-200 flex items-center justify-between text-xs">
               <div>
                 <span className="text-stone-500 text-[11px]">Outstanding Due:</span>
-                <span className="font-extrabold text-[#3D2206] ml-1.5">${d.outstandingBalance.toLocaleString()}</span>
+                <span className="font-extrabold text-[#3D2206] ml-1.5">₹{d.outstandingBalance.toLocaleString('en-IN')}</span>
               </div>
               <div>
                 <span className="text-stone-500 text-[11px]">Lifetime Value:</span>
-                <span className="font-bold text-emerald-700 ml-1.5">${d.lifetimeValue.toLocaleString()}</span>
+                <span className="font-bold text-emerald-700 ml-1.5">₹{d.lifetimeValue.toLocaleString('en-IN')}</span>
               </div>
             </div>
 
@@ -243,7 +243,7 @@ export const OfflineCustomers = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="font-semibold text-stone-700 block mb-1">Credit Limit ($)</label>
+                  <label className="font-semibold text-stone-700 block mb-1">Credit Limit (₹)</label>
                   <input
                     type="number"
                     value={creditLimit}

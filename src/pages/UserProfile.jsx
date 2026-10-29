@@ -125,7 +125,7 @@ export const UserProfile = () => {
 
             <div className="bg-white p-6 rounded-3xl border border-[#F5E5B5] shadow-xs space-y-2">
               <span className="text-xs font-bold uppercase text-stone-400">Total Harvest Reserve Spend</span>
-              <p className="font-serif-luxury text-3xl font-bold text-[#3D2206]">${totalSpent.toFixed(2)}</p>
+              <p className="font-serif-luxury text-3xl font-bold text-[#3D2206]">₹{totalSpent.toFixed(2)}</p>
               <p className="text-xs text-stone-500">Tier: Royal Gold Patron</p>
             </div>
 
@@ -240,7 +240,7 @@ export const UserProfile = () => {
               Golden Bee Loyalty Privileges
             </h3>
             <p className="text-xs sm:text-sm text-stone-600">
-              Earn 10 points for every $1 spent. Redeem for private reserve jars, complimentary honey dippers, and early access to annual Sidr harvests.
+              Earn 1 point for every ₹10 spent. Redeem for private reserve jars, complimentary honey dippers, and early access to annual Sidr harvests.
             </p>
           </div>
 

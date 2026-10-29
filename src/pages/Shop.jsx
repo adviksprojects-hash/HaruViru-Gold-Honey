@@ -196,11 +196,11 @@ export const Shop = () => {
                 <div className="pt-3 border-t border-stone-100 flex items-center justify-between">
                   <div className="flex items-baseline gap-2">
                     <span className="text-xl font-black text-stone-900">
-                      ${product.price}
+                      ₹{product.price}
                     </span>
                     {product.originalPrice && (
                       <span className="text-xs text-stone-400 line-through">
-                        ${product.originalPrice}
+                        ₹{product.originalPrice}
                       </span>
                     )}
                   </div>

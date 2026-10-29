@@ -95,7 +95,7 @@ export const OfflineOrders = () => {
 
                   <td className="py-3.5 px-3 text-right">
                     <span className="font-extrabold text-[#3D2206] text-sm block">
-                      ${ord.totalAmount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      ₹{ord.totalAmount.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </span>
                     <span className="text-[10px] text-emerald-700 font-bold">{ord.paymentStatus}</span>
                   </td>
@@ -175,19 +175,19 @@ export const OfflineOrders = () => {
                   <tr key={idx}>
                     <td className="py-2 font-medium">{it.productName} ({it.weight})</td>
                     <td className="py-2 text-center font-bold">{it.quantity} Jars</td>
-                    <td className="py-2 text-right">${it.price.toFixed(2)}</td>
-                    <td className="py-2 text-right font-bold">${(it.price * it.quantity).toFixed(2)}</td>
+                    <td className="py-2 text-right">₹{it.price.toFixed(2)}</td>
+                    <td className="py-2 text-right font-bold">₹{(it.price * it.quantity).toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
 
             <div className="space-y-1 text-xs text-right border-t pt-3">
-              <div>Subtotal: <b>${activeInvoice.subtotal.toFixed(2)}</b></div>
-              <div>Pallet LTL Freight: <b>${activeInvoice.shippingFee.toFixed(2)}</b></div>
-              <div>Commercial Tax: <b>${activeInvoice.tax.toFixed(2)}</b></div>
+              <div>Subtotal: <b>₹{activeInvoice.subtotal.toFixed(2)}</b></div>
+              <div>Pallet LTL Freight: <b>₹{activeInvoice.shippingFee.toFixed(2)}</b></div>
+              <div>Commercial GST (5%): <b>₹{activeInvoice.tax.toFixed(2)}</b></div>
               <div className="text-lg font-black text-[#3D2206] pt-1">
-                Total Due: ${activeInvoice.totalAmount.toFixed(2)}
+                Total Due: ₹{activeInvoice.totalAmount.toFixed(2)}
               </div>
             </div>
 

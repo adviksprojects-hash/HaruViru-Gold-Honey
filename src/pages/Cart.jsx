@@ -34,7 +34,7 @@ export const Cart = () => {
   const [couponInput, setCouponInput] = useState('');
   const [giftWrap, setGiftWrap] = useState(false);
 
-  const freeShippingThreshold = 50;
+  const freeShippingThreshold = 999;
   const amountNeeded = Math.max(0, freeShippingThreshold - cartSubtotal);
   const progressPercent = Math.min(100, (cartSubtotal / freeShippingThreshold) * 100);
 
@@ -89,7 +89,7 @@ export const Cart = () => {
           <div className="flex items-center gap-2 text-stone-800">
             <Truck className="w-4 h-4 text-amber-600" />
             {amountNeeded > 0 ? (
-              <span>Add <b className="text-orange-600">${amountNeeded.toFixed(2)}</b> more to unlock Complimentary Express Shipping!</span>
+              <span>Add <b className="text-orange-600">₹{amountNeeded.toFixed(2)}</b> more to unlock Complimentary Express Shipping!</span>
             ) : (
               <span className="text-emerald-700 flex items-center gap-1">
                 <Check className="w-4 h-4 text-emerald-600" />
@@ -163,10 +163,10 @@ export const Cart = () => {
 
                   <div className="text-right min-w-[70px]">
                     <span className="font-black text-sm sm:text-base text-stone-900">
-                      ${(item.product.price * item.quantity).toFixed(2)}
+                      ₹{(item.product.price * item.quantity).toFixed(2)}
                     </span>
                     <p className="text-[10px] text-stone-400">
-                      ${item.product.price} each
+                      ₹{item.product.price} each
                     </p>
                   </div>
 
@@ -232,13 +232,13 @@ export const Cart = () => {
             <div className="space-y-3 text-xs text-stone-600">
               <div className="flex justify-between">
                 <span>Subtotal ({cart.length} items)</span>
-                <span className="font-bold text-stone-800">${cartSubtotal.toFixed(2)}</span>
+                <span className="font-bold text-stone-800">₹{cartSubtotal.toFixed(2)}</span>
               </div>
 
               {appliedCoupon && (
                 <div className="flex justify-between text-emerald-700 font-semibold">
                   <span>Coupon ({appliedCoupon.code})</span>
-                  <span>-${cartDiscount.toFixed(2)}</span>
+                  <span>-₹{cartDiscount.toFixed(2)}</span>
                 </div>
               )}
 
@@ -248,19 +248,19 @@ export const Cart = () => {
                   {cartShipping === 0 ? (
                     <span className="text-emerald-700 font-bold">FREE</span>
                   ) : (
-                    `${cartShipping.toFixed(2)}`
+                    `₹${cartShipping.toFixed(2)}`
                   )}
                 </span>
               </div>
 
               <div className="flex justify-between">
-                <span>Estimated Tax (8%)</span>
-                <span className="font-bold text-stone-800">${cartTax.toFixed(2)}</span>
+                <span>Estimated GST (5%)</span>
+                <span className="font-bold text-stone-800">₹{cartTax.toFixed(2)}</span>
               </div>
 
               <div className="pt-3 border-t border-stone-100 flex justify-between items-baseline text-stone-900">
                 <span className="text-sm font-bold">Total Amount</span>
-                <span className="text-2xl font-black text-stone-900">${cartTotal.toFixed(2)}</span>
+                <span className="text-2xl font-black text-stone-900">₹{cartTotal.toFixed(2)}</span>
               </div>
             </div>
 

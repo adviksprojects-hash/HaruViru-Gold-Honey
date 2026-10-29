@@ -3,7 +3,7 @@ import { useApp } from '../../context/AppContext';
 import { 
   Settings, 
   Truck, 
-  DollarSign, 
+  IndianRupee, 
   Boxes, 
   Clock, 
   ShieldCheck, 
@@ -15,9 +15,9 @@ import {
 export const PurchaseSettings = () => {
   const { showToast } = useApp();
 
-  const [honeyFreightRate, setHoneyFreightRate] = useState(1.45); // $/kg for refrigerated mountain truck
-  const [glassFreightRate, setGlassFreightRate] = useState(0.28); // $/unit for ocean container from Italy
-  const [siloColdStorageCost, setSiloColdStorageCost] = useState(420); // $/month
+  const [honeyFreightRate, setHoneyFreightRate] = useState(45); // ₹/kg for refrigerated mountain truck
+  const [glassFreightRate, setGlassFreightRate] = useState(5); // ₹/unit for ocean container from Italy
+  const [siloColdStorageCost, setSiloColdStorageCost] = useState(25000); // ₹/month
   const [moqDrums, setMoqDrums] = useState(500); // kg
 
   const suppliers = [
@@ -27,7 +27,7 @@ export const PurchaseSettings = () => {
       location: 'Wadi Doan / Highland Valleys',
       leadTime: '18 Days (Temperature-controlled maritime & truck)',
       rating: '4.95 / 5.0 (NMR certified)',
-      inboundCost: '$1.45 / kg'
+      inboundCost: '₹45 / kg'
     },
     {
       name: 'Alpine Valley Beekeepers Guild',
@@ -35,7 +35,7 @@ export const PurchaseSettings = () => {
       location: 'Himalayan Foothills Sanctuary',
       leadTime: '5 Days (Direct refrigerated road freight)',
       rating: '4.90 / 5.0 (Cold extracted)',
-      inboundCost: '$0.85 / kg'
+      inboundCost: '₹25 / kg'
     },
     {
       name: 'Veritas Italian Luxury Glassworks',
@@ -43,7 +43,7 @@ export const PurchaseSettings = () => {
       location: 'Venice, Italy',
       leadTime: '28 Days (Ocean freight & custom container)',
       rating: '4.98 / 5.0 (Heavy flint glass)',
-      inboundCost: '$0.28 / jar'
+      inboundCost: '₹5 / jar'
     },
     {
       name: 'Crown Seal & Cap Packaging Ltd.',
@@ -51,7 +51,7 @@ export const PurchaseSettings = () => {
       location: 'Sheffield, UK',
       leadTime: '14 Days (Air freight)',
       rating: '4.85 / 5.0 (Food-grade plastisol liner)',
-      inboundCost: '$0.05 / cap'
+      inboundCost: '₹1 / cap'
     }
   ];
 
@@ -103,11 +103,11 @@ export const PurchaseSettings = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
           <div>
             <label className="font-semibold text-stone-700 block mb-1">
-              Raw Honey Freight ($/kg)
+              Raw Honey Freight (₹/kg)
             </label>
             <input
               type="number"
-              step="0.05"
+              step="1"
               value={honeyFreightRate}
               onChange={(e) => setHoneyFreightRate(parseFloat(e.target.value) || 0)}
               className="w-full bg-[#FAF6EE] border border-stone-300 rounded-xl px-3.5 py-2.5 text-stone-800"
@@ -117,11 +117,11 @@ export const PurchaseSettings = () => {
 
           <div>
             <label className="font-semibold text-stone-700 block mb-1">
-              Glass Jars Freight ($/unit)
+              Glass Jars Freight (₹/unit)
             </label>
             <input
               type="number"
-              step="0.01"
+              step="1"
               value={glassFreightRate}
               onChange={(e) => setGlassFreightRate(parseFloat(e.target.value) || 0)}
               className="w-full bg-[#FAF6EE] border border-stone-300 rounded-xl px-3.5 py-2.5 text-stone-800"
@@ -131,7 +131,7 @@ export const PurchaseSettings = () => {
 
           <div>
             <label className="font-semibold text-stone-700 block mb-1">
-              Silo Silo Bay Energy ($/mo)
+              Silo Bay Cold Storage Energy (₹/mo)
             </label>
             <input
               type="number"

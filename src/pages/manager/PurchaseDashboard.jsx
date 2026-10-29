@@ -119,7 +119,7 @@ export const PurchaseDashboard = () => {
           </div>
           <div>
             <span className="font-serif-luxury text-2xl sm:text-3xl font-extrabold text-[#3D2206]">
-              $14.85
+              ₹485.00
             </span>
             <p className="text-[11px] text-emerald-700 font-semibold mt-1">Target margin: 68.4% gross profit</p>
           </div>

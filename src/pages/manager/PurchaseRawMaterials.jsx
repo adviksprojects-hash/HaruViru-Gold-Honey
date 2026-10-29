@@ -165,7 +165,7 @@ export const PurchaseRawMaterials = () => {
                     </td>
 
                     <td className="py-3.5 px-3 text-right font-extrabold text-[#3D2206]">
-                      ${mat.unitCost.toFixed(2)}
+                      ₹{mat.unitCost.toFixed(2)}
                     </td>
 
                     <td className="py-3.5 px-4 text-center">
@@ -316,10 +316,10 @@ export const PurchaseRawMaterials = () => {
                   />
                 </div>
                 <div>
-                  <label className="font-semibold text-stone-700 block mb-1">Unit Cost ($)</label>
+                  <label className="font-semibold text-stone-700 block mb-1">Unit Cost (₹)</label>
                   <input
                     type="number"
-                    step="0.01"
+                    step="1"
                     value={unitCost}
                     onChange={(e) => setUnitCost(parseFloat(e.target.value) || 0)}
                     className="w-full bg-[#FAF6EE] border border-stone-300 rounded-xl px-3.5 py-2"

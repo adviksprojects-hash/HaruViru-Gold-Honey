@@ -125,7 +125,7 @@ export const ProductDetails = () => {
             <div className="bg-white p-3 rounded-2xl border border-stone-200 flex flex-col items-center gap-1">
               <Truck className="w-5 h-5 text-amber-700" />
               <span className="font-semibold text-stone-800">Free Courier</span>
-              <span className="text-[10px] text-stone-500">Orders over $50</span>
+              <span className="text-[10px] text-stone-500">Orders over ₹999</span>
             </div>
             <div className="bg-white p-3 rounded-2xl border border-stone-200 flex flex-col items-center gap-1">
               <ShieldCheck className="w-5 h-5 text-amber-700" />
@@ -177,16 +177,16 @@ export const ProductDetails = () => {
             <div>
               <div className="flex items-baseline gap-3">
                 <span className="text-3xl font-extrabold text-[#3D2206]">
-                  ${product.price}
+                  ₹{product.price}
                 </span>
                 {product.originalPrice && (
                   <span className="text-base text-stone-400 line-through">
-                    ${product.originalPrice}
+                    ₹{product.originalPrice}
                   </span>
                 )}
                 {product.originalPrice && (
                   <span className="text-xs font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-md">
-                    Save ${product.originalPrice - product.price}
+                    Save ₹{product.originalPrice - product.price}
                   </span>
                 )}
               </div>

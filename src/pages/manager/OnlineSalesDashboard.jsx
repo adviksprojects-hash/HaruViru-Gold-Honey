@@ -63,7 +63,7 @@ export const OnlineSalesDashboard = () => {
           </div>
           <div>
             <span className="font-serif-luxury text-2xl sm:text-3xl font-extrabold text-[#3D2206]">
-              ${onlineRevenue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{onlineRevenue.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
             <p className="text-[11px] text-emerald-600 font-semibold mt-1">+24.2% e-commerce lift</p>
           </div>
@@ -148,7 +148,7 @@ export const OnlineSalesDashboard = () => {
                 </div>
 
                 <div className="text-right">
-                  <span className="font-bold text-stone-900 block">${ord.totalAmount.toFixed(2)}</span>
+                  <span className="font-bold text-stone-900 block">₹{ord.totalAmount.toFixed(2)}</span>
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full inline-block ${
                     ord.status === 'Delivered' ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50 text-amber-800'
                   }`}>

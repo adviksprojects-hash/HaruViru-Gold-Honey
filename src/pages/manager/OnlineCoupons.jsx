@@ -84,9 +84,9 @@ export const OnlineCoupons = () => {
 
             <div className="space-y-1">
               <span className="font-serif-luxury text-2xl font-bold text-[#3D2206]">
-                {cp.discountType === 'percentage' ? `${cp.discountValue}% OFF` : `$${cp.discountValue} FLAT`}
+                {cp.discountType === 'percentage' ? `${cp.discountValue}% OFF` : `₹${cp.discountValue} FLAT`}
               </span>
-              <p className="text-xs text-stone-500">Minimum spend: ${cp.minOrderValue}</p>
+              <p className="text-xs text-stone-500">Minimum spend: ₹{cp.minOrderValue}</p>
             </div>
 
             <div className="pt-2 text-xs text-stone-500 space-y-1">
@@ -151,7 +151,7 @@ export const OnlineCoupons = () => {
               </div>
 
               <div>
-                <label className="font-semibold text-stone-700 block mb-1">Minimum Order ($)</label>
+                <label className="font-semibold text-stone-700 block mb-1">Minimum Order (₹)</label>
                 <input
                   type="number"
                   value={minOrder}

@@ -16,7 +16,7 @@ export const AnimatedHoneyStream = () => {
       <svg
         className="w-full h-full"
         viewBox="0 0 1000 800"
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio="xMidYMin slice"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>

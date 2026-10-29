@@ -220,12 +220,12 @@ export const ProductManagement = () => {
 
                     {/* COGS */}
                     <td className="py-3 px-3 text-right font-medium text-stone-500">
-                      ${prod.cogs?.toFixed(2) || '12.00'}
+                      ₹{prod.cogs?.toFixed(2) || '450.00'}
                     </td>
 
                     {/* Retail Price */}
                     <td className="py-3 px-3 text-right font-extrabold text-[#3D2206] text-sm">
-                      ${prod.price.toFixed(2)}
+                      ₹{prod.price.toFixed(2)}
                     </td>
 
                     {/* In Stock & Adjuster */}
@@ -357,10 +357,10 @@ export const ProductManagement = () => {
                 </div>
 
                 <div>
-                  <label className="font-semibold text-stone-700 block mb-1">Selling Price ($ USD)</label>
+                  <label className="font-semibold text-stone-700 block mb-1">Selling Price (₹ INR)</label>
                   <input
                     type="number"
-                    step="0.01"
+                    step="1"
                     required
                     value={formData.price || 0}
                     onChange={(e) => setFormData({ ...formData, price: parseFloat(e.target.value) || 0 })}
@@ -369,7 +369,7 @@ export const ProductManagement = () => {
                 </div>
 
                 <div>
-                  <label className="font-semibold text-stone-700 block mb-1">Cost of Goods (COGS - $ USD)</label>
+                  <label className="font-semibold text-stone-700 block mb-1">Cost of Goods (COGS - ₹ INR)</label>
                   <input
                     type="number"
                     step="0.01"

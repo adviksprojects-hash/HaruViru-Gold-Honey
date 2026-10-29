@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
 import { 
   TrendingUp, 
-  DollarSign, 
+  IndianRupee, 
   ShoppingBag, 
   Users, 
   Package, 
@@ -98,12 +98,12 @@ export const AdminDashboard = () => {
           <div className="flex items-center justify-between text-stone-500">
             <span className="text-xs font-bold uppercase tracking-wider">Gross Revenue</span>
             <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
-              <DollarSign className="w-4 h-4" />
+              <IndianRupee className="w-4 h-4" />
             </div>
           </div>
           <div className="space-y-1">
             <span className="font-serif-luxury text-2xl sm:text-3xl font-extrabold text-[#3D2206]">
-              ${totalRevenue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{totalRevenue.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
             <div className="flex items-center gap-1.5 text-[11px] text-emerald-600 font-semibold">
               <TrendingUp className="w-3.5 h-3.5" />
@@ -196,7 +196,7 @@ export const AdminDashboard = () => {
           <div className="grid grid-cols-3 gap-3 text-center text-xs">
             <div className="p-3 bg-stone-50 rounded-xl">
               <span className="text-[10px] text-stone-400 block font-bold">REVENUE</span>
-              <span className="text-base font-extrabold text-stone-800">${onlineRevenue.toFixed(2)}</span>
+              <span className="text-base font-extrabold text-stone-800">₹{onlineRevenue.toFixed(2)}</span>
             </div>
             <div className="p-3 bg-stone-50 rounded-xl">
               <span className="text-[10px] text-stone-400 block font-bold">ORDERS</span>
@@ -245,7 +245,7 @@ export const AdminDashboard = () => {
           <div className="grid grid-cols-3 gap-3 text-center text-xs">
             <div className="p-3 bg-stone-50 rounded-xl">
               <span className="text-[10px] text-stone-400 block font-bold">B2B REVENUE</span>
-              <span className="text-base font-extrabold text-stone-800">${wholesaleRevenue.toFixed(2)}</span>
+              <span className="text-base font-extrabold text-stone-800">₹{wholesaleRevenue.toFixed(2)}</span>
             </div>
             <div className="p-3 bg-stone-50 rounded-xl">
               <span className="text-[10px] text-stone-400 block font-bold">BULK ORDERS</span>
@@ -254,7 +254,7 @@ export const AdminDashboard = () => {
             <div className="p-3 bg-stone-50 rounded-xl">
               <span className="text-[10px] text-stone-400 block font-bold">AVG INVOICE</span>
               <span className="text-base font-extrabold text-stone-800">
-                ${wholesaleOrders.length ? (wholesaleRevenue / wholesaleOrders.length).toFixed(0) : '0'}
+                ₹{wholesaleOrders.length ? (wholesaleRevenue / wholesaleOrders.length).toFixed(0) : '0'}
               </span>
             </div>
           </div>
@@ -307,7 +307,7 @@ export const AdminDashboard = () => {
                 </div>
 
                 <div className="text-right space-y-1">
-                  <span className="font-extrabold text-stone-900 block">${order.totalAmount.toFixed(2)}</span>
+                  <span className="font-extrabold text-stone-900 block">₹{order.totalAmount.toFixed(2)}</span>
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full inline-block ${
                     order.status === 'Delivered' 
                       ? 'bg-emerald-50 text-emerald-700' 
@@ -340,7 +340,7 @@ export const AdminDashboard = () => {
                 />
                 <div className="flex-1 min-w-0">
                   <p className="font-bold text-stone-900 truncate">{p.name}</p>
-                  <p className="text-[10px] text-stone-500">${p.price} • {p.stock} units in stock</p>
+                  <p className="text-[10px] text-stone-500">₹{p.price} • {p.stock} units in stock</p>
                 </div>
                 <span className="font-bold text-amber-600 shrink-0">{p.rating} ★</span>
               </div>

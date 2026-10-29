@@ -62,7 +62,7 @@ export const Home = () => {
       {/* ────────────────────────────────────────────────────────── */}
       {/* HERO SECTION WITH ANIMATED HONEY SPILL & BACKGROUND        */}
       {/* ────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[92vh] flex flex-col justify-between overflow-hidden text-center bg-[#FAF6EE] w-full max-w-full">
+      <section className="relative min-h-[860px] sm:min-h-[92vh] flex flex-col justify-between overflow-hidden text-center bg-[#FAF6EE] w-full max-w-full">
         
         {/* Photorealistic Luxury Honey Background */}
         <div className="absolute inset-0 z-0">
@@ -88,7 +88,7 @@ export const Home = () => {
         </div>
 
         {/* Main Hero Content Overlay (Reduced top space on mobile & adjusted for background animation height) */}
-        <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 pb-12 sm:pb-16 flex flex-col items-center justify-between min-h-[95vh] sm:min-h-[90vh] w-full max-w-full">
+        <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 pb-12 sm:pb-16 flex flex-col items-center justify-between min-h-[860px] sm:min-h-[90vh] w-full max-w-full">
           
           <div className="space-y-2.5 sm:space-y-4 max-w-4xl mx-auto w-full">
             {/* Top Pill Badge (First text right below navbar with reduced mobile gap) */}
@@ -98,7 +98,7 @@ export const Home = () => {
             </div>
 
             {/* Main heading: Starts below the honey jar on mobile with bold, increased mobile font size */}
-            <h1 className="mt-28 xs:mt-36 sm:mt-0 text-4xl xs:text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-[#542A0A] tracking-[-0.035em] leading-[1.08] select-none break-words max-w-full">
+            <h1 className="mt-[260px] xs:mt-[290px] sm:mt-0 text-4xl xs:text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-[#542A0A] tracking-[-0.035em] leading-[1.08] select-none break-words max-w-full">
               <span className="block text-[#542A0A]">
                 Savor Special
               </span>
@@ -260,11 +260,11 @@ export const Home = () => {
                 <div className="pt-3 border-t border-stone-100 flex items-center justify-between">
                   <div className="flex items-baseline gap-2">
                     <span className="text-xl font-black text-stone-900">
-                      ${product.price}
+                      ₹{product.price}
                     </span>
                     {product.originalPrice && (
                       <span className="text-xs text-stone-400 line-through">
-                        ${product.originalPrice}
+                        ₹{product.originalPrice}
                       </span>
                     )}
                   </div>

@@ -106,16 +106,16 @@ export const CouponsManagement = () => {
                   {/* Value */}
                   <td className="py-3.5 px-3">
                     <span className="font-extrabold text-[#3D2206] text-sm">
-                      {cp.discountType === 'percentage' ? `${cp.discountValue}% OFF` : `$${cp.discountValue} FLAT`}
+                      {cp.discountType === 'percentage' ? `${cp.discountValue}% OFF` : `₹${cp.discountValue} FLAT`}
                     </span>
                     {cp.maxDiscount && (
-                      <span className="block text-[10px] text-stone-400">Max ${cp.maxDiscount}</span>
+                      <span className="block text-[10px] text-stone-400">Max ₹${cp.maxDiscount}</span>
                     )}
                   </td>
 
                   {/* Min Order */}
                   <td className="py-3.5 px-3 text-stone-700 font-semibold">
-                    ${cp.minOrderValue}
+                    ₹{cp.minOrderValue}
                   </td>
 
                   {/* Scope */}
@@ -215,7 +215,7 @@ export const CouponsManagement = () => {
                     className="w-full bg-[#FAF6EE] border border-stone-300 rounded-xl px-3 py-2 text-stone-800"
                   >
                     <option value="percentage">Percentage (%)</option>
-                    <option value="fixed">Fixed Dollar ($)</option>
+                    <option value="fixed">Fixed Rupee (₹)</option>
                   </select>
                 </div>
 
@@ -233,7 +233,7 @@ export const CouponsManagement = () => {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="font-semibold text-stone-700 block mb-1">Minimum Order ($)</label>
+                  <label className="font-semibold text-stone-700 block mb-1">Minimum Order (₹)</label>
                   <input
                     type="number"
                     value={minOrder}
@@ -243,7 +243,7 @@ export const CouponsManagement = () => {
                 </div>
 
                 <div>
-                  <label className="font-semibold text-stone-700 block mb-1">Max Cap ($ if %)</label>
+                  <label className="font-semibold text-stone-700 block mb-1">Max Cap (₹ if %)</label>
                   <input
                     type="number"
                     value={maxDiscount || ''}

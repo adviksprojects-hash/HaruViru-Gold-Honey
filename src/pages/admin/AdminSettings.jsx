@@ -3,7 +3,7 @@ import { useApp } from '../../context/AppContext';
 import { 
   Settings, 
   Truck, 
-  DollarSign, 
+  IndianRupee, 
   CreditCard, 
   Database, 
   ShieldCheck, 
@@ -18,14 +18,14 @@ export const AdminSettings = () => {
   const { showToast } = useApp();
   
   // Shipping settings
-  const [freeShippingThreshold, setFreeShippingThreshold] = useState(50);
-  const [standardShippingRate, setStandardShippingRate] = useState(8.5);
-  const [expressShippingRate, setExpressShippingRate] = useState(14.0);
+  const [freeShippingThreshold, setFreeShippingThreshold] = useState(999);
+  const [standardShippingRate, setStandardShippingRate] = useState(99);
+  const [expressShippingRate, setExpressShippingRate] = useState(149);
 
   // Tax settings
-  const [taxRate, setTaxRate] = useState(8.0);
+  const [taxRate, setTaxRate] = useState(5.0);
   const [taxInclusive, setTaxInclusive] = useState(false);
-  const [taxId, setTaxId] = useState('US-TAX-8849201-HVG');
+  const [taxId, setTaxId] = useState('GSTIN27AABCH1234F1Z8');
 
   // Payment gateways
   const [stripeActive, setStripeActive] = useState(true);
@@ -147,7 +147,7 @@ export const AdminSettings = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
             <div>
               <label className="font-semibold text-stone-700 block mb-1">
-                Complimentary Shipping Minimum ($)
+                Complimentary Shipping Minimum (₹)
               </label>
               <input
                 type="number"
@@ -160,11 +160,11 @@ export const AdminSettings = () => {
 
             <div>
               <label className="font-semibold text-stone-700 block mb-1">
-                Standard Ground Rate ($)
+                Standard Ground Rate (₹)
               </label>
               <input
                 type="number"
-                step="0.1"
+                step="1"
                 value={standardShippingRate}
                 onChange={(e) => setStandardShippingRate(parseFloat(e.target.value) || 0)}
                 className="w-full bg-[#FAF6EE] border border-stone-300 rounded-xl px-3.5 py-2.5 text-stone-800"
@@ -174,11 +174,11 @@ export const AdminSettings = () => {
 
             <div>
               <label className="font-semibold text-stone-700 block mb-1">
-                Priority Golden Flight Rate ($)
+                Priority Golden Flight Rate (₹)
               </label>
               <input
                 type="number"
-                step="0.1"
+                step="1"
                 value={expressShippingRate}
                 onChange={(e) => setExpressShippingRate(parseFloat(e.target.value) || 0)}
                 className="w-full bg-[#FAF6EE] border border-stone-300 rounded-xl px-3.5 py-2.5 text-stone-800"
@@ -192,7 +192,7 @@ export const AdminSettings = () => {
         <div className="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs space-y-6">
           <div className="flex items-center gap-3 border-b border-stone-100 pb-4">
             <div className="w-9 h-9 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
-              <DollarSign className="w-5 h-5" />
+              <IndianRupee className="w-5 h-5" />
             </div>
             <div>
               <h3 className="font-serif-luxury font-bold text-lg text-[#3D2206]">
@@ -274,7 +274,7 @@ export const AdminSettings = () => {
             <label className="flex items-center justify-between p-3.5 rounded-2xl bg-stone-50 border border-stone-200 cursor-pointer">
               <div>
                 <span className="font-bold text-stone-900 block">Cash On Delivery (COD)</span>
-                <span className="text-[11px] text-stone-500">Available for domestic retail courier shipments up to $250</span>
+                <span className="text-[11px] text-stone-500">Available for domestic retail courier shipments up to ₹5,000</span>
               </div>
               <input
                 type="checkbox"
