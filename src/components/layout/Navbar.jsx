@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
+import haruViruLogo from '../../assets/haruviru-logo.jpg';
 import { 
   ShoppingBag, 
   User, 
@@ -38,11 +39,13 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
-          {/* Logo & Brand Identity (Clean modern sans-serif matching reference) */}
-          <Link to="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform text-base sm:text-lg">
-              🍯
-            </div>
+          {/* Logo & Brand Identity */}
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 group shrink-0">
+            <img 
+              src={haruViruLogo} 
+              alt="HaruViru Gold Honey Logo" 
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover shadow-md shadow-amber-500/20 border-2 border-amber-400 group-hover:scale-105 transition-transform shrink-0" 
+            />
             <div className="flex flex-col">
               <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors leading-none">
                 HaruViru

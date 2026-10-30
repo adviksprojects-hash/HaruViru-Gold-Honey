@@ -113,7 +113,7 @@ export const OnlineOrders = () => {
                   </td>
 
                   <td className="py-3.5 px-3 text-right font-extrabold text-[#3D2206]">
-                    ${ord.totalAmount.toFixed(2)}
+                    ₹{ord.totalAmount.toFixed(2)}
                   </td>
 
                   <td className="py-3.5 px-3 text-stone-600">

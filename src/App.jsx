@@ -65,7 +65,6 @@ const CustomerLayout = () => {
 const DashboardLayout = () => {
   return (
     <div className="min-h-screen flex flex-col w-full max-w-full overflow-x-hidden">
-      <PersonaSwitcher />
       <AdminLayout />
     </div>
   );

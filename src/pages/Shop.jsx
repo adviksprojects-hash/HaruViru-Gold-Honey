@@ -45,23 +45,8 @@ export const Shop = () => {
   }, [products, searchQuery, selectedCategory, selectedWeight, sortBy]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10 bg-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 bg-white">
       
-      {/* Header Banner */}
-      <div className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 rounded-3xl p-8 sm:p-12 border border-amber-200/80 shadow-sm relative overflow-hidden">
-        <div className="relative z-10 max-w-2xl space-y-3">
-          <span className="badge-pill-soft px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider inline-block">
-            Artisanal Reserve Catalog
-          </span>
-          <h1 className="font-serif-luxury text-3xl sm:text-5xl font-black text-stone-900">
-            Rare Single-Origin Honey Collection
-          </h1>
-          <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
-            Every jar is traceable to its high-altitude harvest coordinates, cold-extracted without thermal pasteurization, and sealed in heavy hexagonal glass to retain active royal enzymes.
-          </p>
-        </div>
-      </div>
-
       {/* Search & Filter Toolbar */}
       <div className="bg-stone-50/70 p-4 sm:p-6 rounded-3xl border border-stone-200 shadow-xs space-y-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">

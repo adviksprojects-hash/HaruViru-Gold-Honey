@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import haruViruLogo from '../assets/haruviru-logo.jpg';
 import { 
   Crown, 
   ShieldCheck, 
@@ -61,11 +62,11 @@ export const AboutUs = () => {
             </div>
           </div>
 
-          <div className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-xl border border-stone-200">
+          <div className="relative aspect-square max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-amber-300/60 bg-[#FFFDF7] p-2 flex items-center justify-center">
             <img
-              src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=1000&q=80"
-              alt="Artisanal Honeycomb"
-              className="w-full h-full object-cover"
+              src={haruViruLogo}
+              alt="HaruViru Group of Business Founders & Brand Seal"
+              className="w-full h-full object-contain rounded-2xl"
             />
           </div>
         </div>

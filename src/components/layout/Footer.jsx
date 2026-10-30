@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import haruViruLogo from '../../assets/haruviru-logo.jpg';
 import { 
   Crown, 
   Mail, 
@@ -59,15 +60,17 @@ export const Footer = () => {
           
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center text-white shadow-md">
-                <Crown className="w-5 h-5 text-white" />
-              </div>
+            <Link to="/" className="flex items-center gap-3 group">
+              <img 
+                src={haruViruLogo} 
+                alt="HaruViru Gold Honey Logo" 
+                className="w-12 h-12 rounded-full object-cover shadow-lg border-2 border-amber-400 group-hover:scale-105 transition-transform shrink-0" 
+              />
               <div className="flex flex-col">
                 <span className="font-brand text-xl font-bold tracking-wide text-white leading-none">
                   HaruViru
                 </span>
-                <span className="text-[10px] font-black tracking-[0.25em] text-amber-400 uppercase">
+                <span className="text-[10px] font-black tracking-[0.25em] text-amber-400 uppercase mt-0.5">
                   GOLD HONEY
                 </span>
               </div>

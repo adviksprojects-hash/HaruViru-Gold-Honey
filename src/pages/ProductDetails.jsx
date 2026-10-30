@@ -301,7 +301,7 @@ export const ProductDetails = () => {
                 className="flex-1 bg-[#D89816] hover:bg-[#B87A0B] text-stone-950 font-bold text-sm py-3.5 px-6 rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-98"
               >
                 <ShoppingBag className="w-4 h-4" />
-                <span>Add To Cart • ${(product.price * quantity).toFixed(2)}</span>
+                <span>Add To Cart • ₹{(product.price * quantity).toFixed(2)}</span>
               </button>
             </div>
 

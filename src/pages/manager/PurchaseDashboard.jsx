@@ -104,7 +104,7 @@ export const PurchaseDashboard = () => {
           </div>
           <div>
             <span className="font-serif-luxury text-2xl sm:text-3xl font-extrabold text-[#3D2206]">
-              ${totalInventoryValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{totalInventoryValue.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
             <p className="text-[11px] text-stone-500 mt-1">Raw barrels, glass jars & lids</p>
           </div>
@@ -170,7 +170,7 @@ export const PurchaseDashboard = () => {
                       <span className="font-mono text-[10px] text-stone-400">({mat.code})</span>
                     </div>
                     <p className="text-[11px] text-stone-500 mt-0.5">
-                      Supplier: {mat.supplier} • Unit Cost: ${mat.unitCost}
+                      Supplier: {mat.supplier} • Unit Cost: ₹{mat.unitCost}
                     </p>
                   </div>
 

@@ -5,12 +5,7 @@ import {
   Truck, 
   IndianRupee, 
   CreditCard, 
-  Database, 
-  ShieldCheck, 
   Save, 
-  Sparkles, 
-  Server, 
-  Key, 
   Check
 } from 'lucide-react';
 
@@ -32,22 +27,9 @@ export const AdminSettings = () => {
   const [codActive, setCodActive] = useState(true);
   const [wireTransferActive, setWireTransferActive] = useState(true);
 
-  // Neon DB Connection
-  const [neonConnectionString, setNeonConnectionString] = useState('');
-  const [neonConnected, setNeonConnected] = useState(false);
-
   const handleSaveSettings = (e) => {
     e.preventDefault();
     showToast('System, Shipping, and Tax settings saved successfully!', 'success');
-  };
-
-  const handleConnectNeon = () => {
-    if (!neonConnectionString.trim()) {
-      showToast('Please enter your Neon DB connection string.', 'error');
-      return;
-    }
-    setNeonConnected(true);
-    showToast('Neon DB connection string saved and validated! Ready for database migration.', 'success');
   };
 
   return (
@@ -63,7 +45,7 @@ export const AdminSettings = () => {
             Settings (Shipping, Tax, & Payment)
           </h1>
           <p className="text-xs text-stone-500 mt-0.5">
-            Configure shipping courier tiers, tax rates, payment gateways, and prepare for Neon PostgreSQL database integration.
+            Configure shipping courier tiers, tax rates, and payment gateways.
           </p>
         </div>
 
@@ -78,58 +60,6 @@ export const AdminSettings = () => {
 
       <form onSubmit={handleSaveSettings} className="space-y-8">
         
-        {/* Neon DB Connection String Card (Highlighted for user request) */}
-        <div className="bg-[#1C120A] text-white rounded-3xl p-6 sm:p-8 border border-[#D89816]/40 shadow-xl space-y-5">
-          <div className="flex items-center justify-between border-b border-stone-800 pb-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-[#E4B345] flex items-center justify-center border border-amber-500/30">
-                <Database className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-serif-luxury font-bold text-lg text-[#F5E5B5]">
-                  Neon DB Connection Setup
-                </h3>
-                <p className="text-xs text-stone-400">
-                  Ready to connect PostgreSQL database when you provide connection string.
-                </p>
-              </div>
-            </div>
-
-            <span className={`text-[10px] font-bold px-3 py-1 rounded-full border ${
-              neonConnected
-                ? 'bg-emerald-950 text-emerald-400 border-emerald-500/50'
-                : 'bg-amber-950/60 text-amber-300 border-amber-500/40'
-            }`}>
-              {neonConnected ? '● Neon DB Configured' : '○ Awaiting Neon Connection String'}
-            </span>
-          </div>
-
-          <div className="space-y-3 text-xs">
-            <label className="font-semibold text-stone-300 block">
-              Neon PostgreSQL Connection String (e.g. postgres://user:pass@ep-cool-base.us-east-2.aws.neon.tech/neondb?sslmode=require)
-            </label>
-            <div className="flex flex-col sm:flex-row gap-2">
-              <input
-                type="password"
-                value={neonConnectionString}
-                onChange={(e) => setNeonConnectionString(e.target.value)}
-                placeholder="postgres://[user]:[password]@[neon-endpoint].neon.tech/haruviru_gold?sslmode=require"
-                className="flex-1 bg-[#291A0D] border border-[#D89816]/40 rounded-xl px-4 py-3 text-xs text-stone-100 placeholder-stone-500 font-mono focus:outline-hidden focus:border-[#E4B345]"
-              />
-              <button
-                type="button"
-                onClick={handleConnectNeon}
-                className="bg-[#D89816] hover:bg-[#B87A0B] text-stone-950 font-bold px-6 py-3 rounded-xl transition-all shadow-md shrink-0"
-              >
-                Validate & Connect
-              </button>
-            </div>
-            <p className="text-[11px] text-stone-400">
-              When supplied, schema tables (Users, HoneyProducts, Orders, Reviews, RawMaterials, B2BInvoices) can be migrated automatically.
-            </p>
-          </div>
-        </div>
-
         {/* 1. Shipping Settings */}
         <div className="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs space-y-6">
           <div className="flex items-center gap-3 border-b border-stone-100 pb-4">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
+import haruViruLogo from '../assets/haruviru-logo.jpg';
 import { 
   ShoppingBag, 
   Truck, 
@@ -195,9 +196,11 @@ export const OrderHistory = () => {
           <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 border border-[#F5E5B5] shadow-2xl space-y-6">
             <div className="flex items-start justify-between border-b border-stone-100 pb-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E4B345] to-[#8F5808] flex items-center justify-center text-white font-bold">
-                  <Crown className="w-5 h-5 text-amber-100" />
-                </div>
+                <img 
+                  src={haruViruLogo} 
+                  alt="HaruViru Gold Honey" 
+                  className="w-12 h-12 rounded-full object-cover shadow-sm border border-amber-400" 
+                />
                 <div>
                   <h3 className="font-brand font-bold text-lg text-[#3D2206]">
                     HARUVIRU GOLD HONEY

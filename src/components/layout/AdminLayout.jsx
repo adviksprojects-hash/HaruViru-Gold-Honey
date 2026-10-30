@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation, Outlet, useNavigate } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
+import haruViruLogo from '../../assets/haruviru-logo.jpg';
 import { 
   LayoutDashboard, 
   Users2, 
@@ -120,15 +121,17 @@ export const AdminLayout = () => {
             {sidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
 
-          <Link to="/" className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#E4B345] to-[#8F5808] flex items-center justify-center text-white shadow-sm">
-              <Crown className="w-5 h-5 text-amber-100" />
-            </div>
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <img 
+              src={haruViruLogo} 
+              alt="HaruViru Gold Honey Logo" 
+              className="w-9 h-9 rounded-full object-cover shadow-sm border border-[#D89816]/50 group-hover:scale-105 transition-transform shrink-0" 
+            />
             <div className="hidden sm:flex flex-col">
               <span className="font-brand text-base font-bold tracking-wider text-[#F5E5B5] leading-none">
                 HARUVIRU GOLD
               </span>
-              <span className="text-[9px] font-bold tracking-[0.2em] text-[#D89816] uppercase">
+              <span className="text-[9px] font-bold tracking-[0.2em] text-[#D89816] uppercase mt-0.5">
                 MANAGEMENT SUITE
               </span>
             </div>

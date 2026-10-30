@@ -172,7 +172,7 @@ export const UserProfile = () => {
 
                   <div className="flex items-center gap-4">
                     <span className="font-bold text-sm text-[#3D2206]">
-                      ${order.totalAmount.toFixed(2)}
+                      ₹{order.totalAmount.toFixed(2)}
                     </span>
                     <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full ${
                       order.status === 'Delivered' 

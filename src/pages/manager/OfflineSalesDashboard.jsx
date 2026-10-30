@@ -91,7 +91,7 @@ export const OfflineSalesDashboard = () => {
           </div>
           <div>
             <span className="font-serif-luxury text-2xl sm:text-3xl font-extrabold text-[#3D2206]">
-              ${totalReceivables.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              ₹{totalReceivables.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
             <p className="text-[11px] text-amber-800 font-semibold mt-1">Under standard Net 30/60 terms</p>
           </div>
@@ -142,13 +142,13 @@ export const OfflineSalesDashboard = () => {
                     </span>
                   </div>
                   <p className="text-[11px] text-stone-500 mt-0.5">
-                    Contact: {d.contactPerson} • {d.city} • Credit: ${d.creditLimit.toLocaleString()} ({d.paymentTerms})
+                    Contact: {d.contactPerson} • {d.city} • Credit: ₹{d.creditLimit.toLocaleString('en-IN')} ({d.paymentTerms})
                   </p>
                 </div>
 
                 <div className="text-right">
                   <span className="font-extrabold text-stone-900 block">
-                    ${d.outstandingBalance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    ₹{d.outstandingBalance.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </span>
                   <span className="text-[10px] text-stone-400">Balance Due</span>
                 </div>

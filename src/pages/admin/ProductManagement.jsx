@@ -11,7 +11,8 @@ import {
   Check, 
   X, 
   Sparkles,
-  ArrowUpDown
+  ArrowUpDown,
+  Upload
 } from 'lucide-react';
 
 export const ProductManagement = () => {
@@ -48,6 +49,28 @@ export const ProductManagement = () => {
   });
 
   const [tastingInput, setTastingInput] = useState('');
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (!file.type.startsWith('image/')) {
+      showToast('Please select a valid image file.', 'error');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const dataUrl = event.target?.result;
+      if (typeof dataUrl === 'string') {
+        setFormData((prev) => ({ 
+          ...prev, 
+          image: dataUrl,
+          gallery: prev.gallery && prev.gallery.length > 0 ? [dataUrl, ...prev.gallery.slice(1)] : [dataUrl]
+        }));
+        showToast('Image uploaded from system successfully!', 'success');
+      }
+    };
+    reader.readAsDataURL(file);
+  };
 
   const categories = ['All', 'Wildflower', 'Sidr', 'Acacia', 'Raw Comb', 'Infused', 'Himalayan White'];
 
@@ -420,14 +443,50 @@ export const ProductManagement = () => {
                   />
                 </div>
 
-                <div className="sm:col-span-2">
-                  <label className="font-semibold text-stone-700 block mb-1">Image URL</label>
-                  <input
-                    type="text"
-                    value={formData.image || ''}
-                    onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                    className="w-full bg-[#FCF9F2] border border-stone-300 rounded-xl px-3.5 py-2.5 text-stone-800"
-                  />
+                <div className="sm:col-span-2 space-y-2">
+                  <label className="font-semibold text-stone-700 block">Product Image</label>
+                  
+                  <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+                    {formData.image && (
+                      <div className="relative w-16 h-16 rounded-xl overflow-hidden border-2 border-amber-400 shrink-0 bg-stone-100 shadow-xs">
+                        <img src={formData.image} alt="Preview" className="w-full h-full object-cover" />
+                      </div>
+                    )}
+                    
+                    <div className="flex-1 w-full space-y-2">
+                      <div className="flex items-center gap-2">
+                        <label className="cursor-pointer inline-flex items-center gap-2 bg-[#FAF6EE] hover:bg-[#F5EDD8] border border-amber-300 text-[#3D2206] px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-xs hover:scale-105 active:scale-95">
+                          <Upload className="w-4 h-4 text-[#D89816]" />
+                          <span>Upload Image from System</span>
+                          <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handleImageUpload}
+                            className="hidden"
+                          />
+                        </label>
+                        {formData.image && (
+                          <button
+                            type="button"
+                            onClick={() => setFormData(prev => ({ ...prev, image: '' }))}
+                            className="text-[11px] text-red-600 hover:underline font-semibold"
+                          >
+                            Clear Image
+                          </button>
+                        )}
+                      </div>
+                      <div>
+                        <span className="text-[10px] text-stone-400 block mb-1">Or paste online image URL:</span>
+                        <input
+                          type="text"
+                          value={formData.image || ''}
+                          onChange={(e) => setFormData({ ...formData, image: e.target.value })}
+                          placeholder="https://images.unsplash.com/..."
+                          className="w-full bg-[#FCF9F2] border border-stone-300 rounded-xl px-3.5 py-2 text-xs text-stone-800"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="sm:col-span-2">

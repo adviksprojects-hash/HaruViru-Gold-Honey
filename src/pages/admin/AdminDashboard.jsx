@@ -140,7 +140,7 @@ export const AdminDashboard = () => {
           </div>
           <div className="space-y-1">
             <span className="font-serif-luxury text-2xl sm:text-3xl font-extrabold text-[#3D2206]">
-              ${totalOrdersCount ? (totalRevenue / totalOrdersCount).toFixed(2) : '0.00'}
+              ₹{totalOrdersCount ? (totalRevenue / totalOrdersCount).toFixed(2) : '0.00'}
             </span>
             <div className="text-[11px] text-amber-700 font-semibold">
               High-value luxury basket size

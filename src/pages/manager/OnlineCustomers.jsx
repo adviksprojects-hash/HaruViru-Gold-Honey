@@ -125,7 +125,7 @@ export const OnlineCustomers = () => {
                   </td>
 
                   <td className="py-3.5 px-3 text-right font-extrabold text-[#3D2206]">
-                    ${user.totalSpend.toFixed(2)}
+                    ₹{user.totalSpend.toFixed(2)}
                   </td>
 
                   <td className="py-3.5 px-4 text-right">
